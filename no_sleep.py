@@ -76,3 +76,4 @@ class No_Sleep:
             
 if __name__ == '__main__':
     ns = No_Sleep()
+    ns.main()
