@@ -1,6 +1,7 @@
-from time import sleep
-from datetime import datetime
 import re
+from datetime import datetime
+from time import sleep
+
 import requests
 
 '''
@@ -52,9 +53,13 @@ class No_Sleep:
         return match.group(2)
     
     def __init__(self) -> None:
-        self.running = True
+        self.running = True # leaving this for now, might add the ablity to kill the script later
     
     def main(self) -> None:
+        """
+        The main function pings a list of websites, prints their status codes and shuts down when the
+        program is no longer running.
+        """
         print('====== No Sleep ======\n\n')
         
         print(f'Pinging {len(SITES)} site(s)\nStarting program...')
